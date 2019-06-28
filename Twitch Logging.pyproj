@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2cdd2e0a-9ef3-4513-a69d-c0de52cd7868}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>create_dataframe.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".env" />
+    <Content Include="channel_logs\aimbotcalvin\12-15 08-36 chat.log" />
+    <Content Include="channel_logs\a_seagull\12-13 09-50 chat.log" />
+    <Content Include="channel_logs\barcode_ow\12-11 10-39 chat.log" />
+    <Content Include="channel_logs\barcode_ow\12-11 11-41 chat.log" />
+    <Content Include="channel_logs\barcode_ow\12-13 14-28 chat.log" />
+    <Content Include="channel_logs\fran\12-12 20-02 chat.log" />
+    <Content Include="channel_logs\fran\12-12 20-04 chat.log" />
+    <Content Include="channel_logs\fran\12-12 20-38 chat.log" />
+    <Content Include="data_frames\barcode_ow\barcode_ow_12-11 10-39.csv" />
+    <Content Include="data_frames\barcode_ow\barcode_ow_12-11 11-41.csv" />
+    <Content Include="data_frames\fran\fran_12-12 20-02.csv" />
+    <Content Include="data_frames\fran\fran_12-12 20-04.csv" />
+    <Content Include="data_frames\fran\fran_12-12 20-38.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="create_dataframe.py" />
+    <Compile Include="get_chat_log.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.6</Version>
+      <Description>env (Python 3.6 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="channel_logs\" />
+    <Folder Include="channel_logs\aimbotcalvin\" />
+    <Folder Include="channel_logs\a_seagull\" />
+    <Folder Include="channel_logs\barcode_ow\" />
+    <Folder Include="channel_logs\fran\" />
+    <Folder Include="data_frames\" />
+    <Folder Include="data_frames\barcode_ow\" />
+    <Folder Include="data_frames\fran\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
