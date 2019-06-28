@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{2cdd2e0a-9ef3-4513-a69d-c0de52cd7868}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>create_dataframe.py</StartupFile>
+    <StartupFile>get_chat_log.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -33,6 +33,7 @@
     <Content Include="data_frames\fran\fran_12-12 20-02.csv" />
     <Content Include="data_frames\fran\fran_12-12 20-04.csv" />
     <Content Include="data_frames\fran\fran_12-12 20-38.csv" />
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="create_dataframe.py" />
